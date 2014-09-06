@@ -1,0 +1,27 @@
+{
+  "name": "gulp-phpmd",
+  "version": "1.0.0",
+  "description": "PHP Mess Detector plugin for Gulp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kid-icarus/gulp-phpmd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kid-icarus/gulp-phpmd/issues"
+  },
+  "author": {
+    "name": "Ryan Kois",
+    "email": "ryan.kois@gmail.com"
+  },
+  "main": "index.js",
+  "keywords": [
+    "gulpplugin",
+    "phpmd"
+  ],
+  "dependencies": {
+    "gulp-util": "~3.0.0",
+    "through2": "^0.5.1",
+    "chalk": "~0.5.1"
+  }
+}
