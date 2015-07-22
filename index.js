@@ -5,9 +5,11 @@ var exec = require('child_process').exec
 /**
  * Builds shell command for PHPMD according to specified options.
  */
-var buildCommand = function(opt) {
+var buildCommand = function(filepath, opt) {
   var opt = opt || {}
-  var command = opt.bin || 'phpmd'
+  var command = opt.bin || 'phpmd';
+
+  command += ' ' + filepath; 
 
   if (opt.hasOwnProperty('format')) {
     command += ' ' + opt.format + ' '
@@ -47,7 +49,7 @@ var phpmdPlugin = function(options) {
     }
 
     // Run PHPMD
-    var phpmd = exec(buildCommand(options), function(error, stdout, stderr) {
+    var phpmd = exec(buildCommand(file.path, options), function(error, stdout, stderr) {
       var report = {
         error: false,
         output: ''
