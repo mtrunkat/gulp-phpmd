@@ -12,7 +12,7 @@ var chalk = require('chalk');
  */
 module.exports = function() {
   return through.obj(function(file, enc, callback) {
-    var report = file.phpcsReport || {};
+    var report = file.phpmdReport || {};
 
     if (report.error) {
       var errorMessage = 'PHP Code Sniffer failed' +
