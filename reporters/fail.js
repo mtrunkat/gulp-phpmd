@@ -18,6 +18,8 @@ module.exports = function() {
       var errorMessage = 'PHP Code Sniffer failed' +
         ' on ' + chalk.magenta(file.path);
 
+      console.log(report.output);
+
       this.emit('error', new gutil.PluginError('gulp-phpcs', errorMessage));
       callback();
 
